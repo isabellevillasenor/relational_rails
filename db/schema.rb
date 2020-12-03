@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_03_035706) do
+ActiveRecord::Schema.define(version: 2020_12_03_040426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_035706) do
     t.datetime "season_picked"
     t.string "ideal_teapot"
     t.boolean "caffeinated"
-    t.integer "tea_house_id"
+    t.integer "tea_farm_id"
   end
 
 end
