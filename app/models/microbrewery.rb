@@ -1,0 +1,3 @@
+class Microbrewery < ApplicationRecord
+
+end

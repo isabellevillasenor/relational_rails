@@ -1,0 +1,6 @@
+<h1>Kia Ora, whanua! Keen for a beer?</h1>
+
+<h2>Pick your watering hole:</h2>
+<% @microbreweries.each do |microbrewery| %>
+  <p><%= microbrewery.name %></p>
+<% end %>
