@@ -1,6 +1,6 @@
-class Microbreweries < ApplicationController
+class MicrobreweriesController < ApplicationController
   def index
-    @microbreweries = Microbreweries.all
+    @microbreweries = Microbrewery.all
   end
 
 end

@@ -7,7 +7,7 @@ RSpec.describe "microbreweries index page", type: :feature do
                                     license_renewal:   "2020-12-03", 
                                     outdoor_seating:   true, 
                                     social_distancing: false)
-    brewery_2 = Microbrewery.create(name:              "Parot Dog", 
+    brewery_2 = Microbrewery.create(name:              "Parrot Dog", 
                                     location:          "60 - 66 Kingsford Smith Street, Lyall Bay, Wellington, 6022 New Zealand", 
                                     license_renewal:   "2021-01-03", 
                                     outdoor_seating:   true, 
