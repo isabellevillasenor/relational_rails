@@ -1,0 +1,16 @@
+<h3>Edit:</h3>
+<%= form_tag("/microbreweries/#{@microbrewery.id}", :method => "post") do %>
+  <%= label_tag :name %><br>
+  <%= text_field_tag :name %><br>
+  <%= label_tag :location %><br>
+  <%= text_field_tag :location %><br>
+  <%= label_tag :license_renewal %><br>
+  <%= date_field_tag :license_renewal, :date %><br>
+  <%= label_tag :outdoor_seating %>
+  <%= hidden_field_tag :outdoor_seating, false %>
+  <%= check_box_tag :outdoor_seating, true %><br>
+  <%= label_tag :social_distancing %>
+  <%= hidden_field_tag :social_distancing, false %>
+  <%= check_box_tag :social_distancing, true %><br>
+  <%= submit_tag 'Submit' %>
+<% end %>

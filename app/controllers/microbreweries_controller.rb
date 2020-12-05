@@ -15,6 +15,22 @@ class MicrobreweriesController < ApplicationController
     microbrewery.save
     redirect_to '/microbreweries'
   end 
+
+  def edit
+    @microbrewery = Microbrewery.find(params[:id])
+  end
+
+  def update
+    microbrewery = Microbrewery.find(params[:id])
+    microbrewery.update(brewery_params)
+    microbrewery.save
+    redirect_to "/microbreweries/#{microbrewery.id}"
+  end
+
+  def destroy
+    Microbrewery.destroy(params[:id])
+    redirect_to '/microbreweries'
+  end
   
   private
   def brewery_params
