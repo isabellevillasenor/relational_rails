@@ -20,4 +20,10 @@ RSpec.describe "microbreweries index page", type: :feature do
     expect(page).to have_content(brewery_2.name)
   end
 
+  it "will have a create new brewery button" do
+    visit "/microbreweries"
+
+    expect(page).to have_link("New Brewery")
+  end
+
 end
