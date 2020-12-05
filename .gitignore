@@ -14,7 +14,7 @@
 !/tmp/.keep
 .DS_Store
 /coverage
-
+coverage
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
