@@ -13,7 +13,7 @@
 !/log/.keep
 !/tmp/.keep
 .DS_Store
-coverage/.last_run.json
+/coverage
 
 # Ignore uploaded files in development
 /storage/*
