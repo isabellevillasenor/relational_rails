@@ -7,5 +7,5 @@ get '/microbreweries/:id', to: 'microbreweries#show'
 get '/microbreweries/:id/edit', to: 'microbreweries#edit'
 patch '/microbreweries/:id', to: 'microbreweries#update'
 post '/microbreweries/:id', to: 'microbreweries#update'
-
+delete 'microbreweries/:id', to: 'microbreweries#destroy'
 end

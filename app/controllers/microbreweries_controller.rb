@@ -26,6 +26,11 @@ class MicrobreweriesController < ApplicationController
     microbrewery.save
     redirect_to "/microbreweries/#{microbrewery.id}"
   end
+
+  def destroy
+    Microbrewery.destroy(params[:id])
+    redirect_to '/microbreweries'
+  end
   
   private
   def brewery_params
