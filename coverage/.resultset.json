@@ -244,12 +244,47 @@
           null,
           1,
           1,
+          1,
+          1,
           null,
           null,
           null
         ]
       },
       "/Users/isabellevillasenor/Turing/Mod_2/projects/relational_rails/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/isabellevillasenor/Turing/Mod_2/projects/relational_rails/app/controllers/microbreweries_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/isabellevillasenor/Turing/Mod_2/projects/relational_rails/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
@@ -268,28 +303,8 @@
           1,
           null
         ]
-      },
-      "/Users/isabellevillasenor/Turing/Mod_2/projects/relational_rails/app/controllers/microbreweries_controller.rb": {
-        "lines": [
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/isabellevillasenor/Turing/Mod_2/projects/relational_rails/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1607185909
+    "timestamp": 1607204528
   }
 }

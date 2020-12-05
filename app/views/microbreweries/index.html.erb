@@ -3,4 +3,10 @@
 <h2>Pick your watering hole:</h2>
 <% @microbreweries.each do |microbrewery| %>
   <li><a href="/microbreweries/<%= microbrewery.id %>"><%= microbrewery.name %></a></li>
+    <form action="/microbreweries/<%= microbrewery.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="delete"/>
+  </form>
 <% end %>
+<h4><a href="/microbreweries/new">New Brewery</a></h4>
