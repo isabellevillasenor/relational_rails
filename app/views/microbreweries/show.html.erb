@@ -3,6 +3,6 @@
 <p><b>Location: </b><%= @microbrewery.location %></p> 
 <p><b>License Renewal Date: </b><%= @microbrewery.license_renewal %></p>
 <p><b>Offers Outdoor Seating: </b><%= @microbrewery.outdoor_seating %></p>
-<p><b>Social Distancing: </b><%= @microbrewery.social_distancing %></p>
+<p><b>Social Distancing: </b><%= @microbrewery.social_distancing %></p><br>
 
-
+<%= link_to "Update", "/microbreweries/#{@microbrewery.id}/edit", method: :edit %>

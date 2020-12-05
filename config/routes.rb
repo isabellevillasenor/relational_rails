@@ -4,6 +4,8 @@ get '/microbreweries', to: 'microbreweries#index'
 get '/microbreweries/new', to: 'microbreweries#new'
 post '/microbreweries', to: 'microbreweries#create'
 get '/microbreweries/:id', to: 'microbreweries#show'
-
+get '/microbreweries/:id/edit', to: 'microbreweries#edit'
+patch '/microbreweries/:id', to: 'microbreweries#update'
+post '/microbreweries/:id', to: 'microbreweries#update'
 
 end
