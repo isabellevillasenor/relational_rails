@@ -16,8 +16,8 @@ RSpec.describe "microbreweries index page", type: :feature do
 
     visit "/microbreweries"
 
-  expect(page).to have_content(brewery_1.name)
-  expect(page).to have_content(brewery_2.name)
+    expect(page).to have_content(brewery_1.name)
+    expect(page).to have_content(brewery_2.name)
   end
 
 end
