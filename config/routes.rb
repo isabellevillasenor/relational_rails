@@ -10,5 +10,7 @@ post '/microbreweries/:id', to: 'microbreweries#update'
 delete 'microbreweries/:id', to: 'microbreweries#destroy'
 
 get '/teahouses', to: 'teahouses#index'
+get 'teahouses/new', to: 'teahouses#new'
+post '/teahouses', to: 'teahouses#create'
 get '/teahouses/:id', to: 'teahouses#show'
 end
