@@ -29,6 +29,11 @@ class TeahousesController < ApplicationController
     redirect_to "/teahouses/#{teahouse.id}"
   end
 
+  def destroy
+    Teahouse.destroy(params[:id])
+    redirect_to '/teahouses'
+  end
+
   private
   def house_params
     params.permit(:name, :location, :restocked_on, :opening_date, :allows_dogs)
