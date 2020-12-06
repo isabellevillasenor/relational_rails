@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_05_021756) do
+ActiveRecord::Schema.define(version: 2020_12_06_004033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,11 +35,11 @@ ActiveRecord::Schema.define(version: 2020_12_05_021756) do
     t.boolean "social_distancing"
   end
 
-  create_table "tea_houses", force: :cascade do |t|
+  create_table "teahouses", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.datetime "restocked_on"
-    t.datetime "hours_of_operation"
+    t.datetime "opening_date"
     t.boolean "allows_dogs"
   end
 

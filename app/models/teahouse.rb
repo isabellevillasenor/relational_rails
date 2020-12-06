@@ -1,0 +1,3 @@
+class Teahouse < ApplicationRecord
+
+end

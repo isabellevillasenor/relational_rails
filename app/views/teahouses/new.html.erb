@@ -1,0 +1,16 @@
+<h3>What's your new brewing sanctuary?</h3>
+
+<%= form_tag("/teahouses", :method => "post") do %>
+  <%= label_tag :name %><br>
+  <%= text_field_tag :name %><br>
+  <%= label_tag :location %><br>
+  <%= text_field_tag :location %><br>
+  <%= label_tag :restocked_on %><br>
+  <%= date_field_tag :restocked_on, :date %><br>
+  <%= label_tag :opening_date %><br>
+  <%= date_field_tag :opening_date, :date %><br>
+  <%= label_tag :allows_dogs %>
+  <%= hidden_field_tag :allows_dogs, false %>
+  <%= check_box_tag :allows_dogs, true %><br>
+  <%= submit_tag 'Submit'%>
+<% end %>
