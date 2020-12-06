@@ -3,4 +3,6 @@
 <p><b>Location: </b><%= @teahouse.location %></p>
 <p><b>Restocked On: </b><%= @teahouse.restocked_on %></p>
 <p><b>Opening Date: </b><%= @teahouse.opening_date %></p>
-<p><b>Dogs Permitted: </b><%= @teahouse.allows_dogs %></p>
+<p><b>Dogs Permitted: </b><%= @teahouse.allows_dogs %></p><br>
+
+<%= link_to "Update", "/teahouses/#{@teahouse.id}/edit", method: :edit %>
