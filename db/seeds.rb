@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Microbrewery.destroy_all
 Teahouse.destroy_all
+Teas.destroy_all
+Beers.destroy_all
 
 Microbrewery.create!(
   name: "Tuatara",
@@ -38,3 +40,29 @@ Teahouse.create!(
   opening_date:       "2010-02-01 06:00:00",
   allows_dogs:        false
   )
+
+Tea.create!(
+  name: "Young Gushu",
+  category: "Ripe PuErh",
+  origin: "Bang Dong Da Xue Shan, Yunnan, China",
+  grams_needed: 5.0,
+  steep_time: 25,
+  brew_temp: 99,
+  number_of_infusions: 12,
+  season_picked: "2020-03-08 08:00:00",
+  ideal_teapot: "Gaiwan",
+  caffeinated: true
+)
+
+Tea.create!(
+  name: "Mi Lan Xiang",
+  category: "Oolang",
+  origin: "Wudong, Guangdong, China",
+  grams_needed: 5.0,
+  steep_time: 25,
+  brew_temp: 95,
+  number_of_infusions: 9,
+  season_picked: "2020-03-01 08:00:00",
+  ideal_teapot: "Kyusu",
+  caffeinated: true
+)

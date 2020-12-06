@@ -17,4 +17,7 @@ get '/teahouses/:id/edit', to: 'teahouses#edit'
 patch '/teahouses/:id', to: 'teahouses#update'
 post '/teahouses/:id', to: 'teahouses#update'
 delete 'teahouses/:id', to: 'teahouses#destroy'
+
+get '/teas', to: 'teas#index'
+# get '/teas', to: 'teas#show'
 end
