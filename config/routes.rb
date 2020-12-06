@@ -8,4 +8,6 @@ get '/microbreweries/:id/edit', to: 'microbreweries#edit'
 patch '/microbreweries/:id', to: 'microbreweries#update'
 post '/microbreweries/:id', to: 'microbreweries#update'
 delete 'microbreweries/:id', to: 'microbreweries#destroy'
+
+get '/teahouses', to: 'teahouses#index'
 end
