@@ -1,7 +1,11 @@
 class TeahousesController < ApplicationController
 
   def index
-    @tea_houses = Teahouse.all
+    @teahouses = Teahouse.all
+  end
+
+  def show
+    @teahouse = Teahouse.find(params[:id])
   end
 
 end
