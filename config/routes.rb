@@ -13,8 +13,13 @@ get '/teahouses', to: 'teahouses#index'
 get 'teahouses/new', to: 'teahouses#new'
 post '/teahouses', to: 'teahouses#create'
 get '/teahouses/:id', to: 'teahouses#show'
+#
+get '/teahouses/:id/teas', to: 'teas#show'
+
 get '/teahouses/:id/edit', to: 'teahouses#edit'
 patch '/teahouses/:id', to: 'teahouses#update'
 post '/teahouses/:id', to: 'teahouses#update'
 delete 'teahouses/:id', to: 'teahouses#destroy'
+
+get '/teas', to: 'teas#index'
 end
