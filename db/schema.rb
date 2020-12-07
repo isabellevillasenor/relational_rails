@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_06_220824) do
+ActiveRecord::Schema.define(version: 2020_12_06_230050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,7 +54,9 @@ ActiveRecord::Schema.define(version: 2020_12_06_220824) do
     t.datetime "season_picked"
     t.string "ideal_teapot"
     t.boolean "caffeinated"
-    t.integer "tea_house_id"
+    t.bigint "teahouse_id"
+    t.index ["teahouse_id"], name: "index_teas_on_teahouse_id"
   end
 
+  add_foreign_key "teas", "teahouses"
 end

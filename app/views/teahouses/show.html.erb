@@ -5,4 +5,5 @@
 <p><b>Opening Date: </b><%= @teahouse.opening_date %></p>
 <p><b>Dogs Permitted: </b><%= @teahouse.allows_dogs %></p><br>
 
-<%= link_to "Update", "/teahouses/#{@teahouse.id}/edit", method: :edit %>
+<%= link_to "Stocked Teas", "/teahouses/#{@teahouse.id}/teas", method: :show %><br>
+<%= link_to "Update Teahouse", "/teahouses/#{@teahouse.id}/edit", method: :edit %>
