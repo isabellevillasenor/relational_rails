@@ -1,6 +1,6 @@
-<h1>Tea List:</h1>
+<h1><%= @teahouse.name %> Tea List:</h1>
 
-<% @teas.each do |tea| %>
+<% @teahouse_teas.each do |tea| %>
   <h3>Name: <%= tea.name %></h3>
   <li>Category: <%= tea.category %></li>
   <li>Origin: <%= tea.origin %></li>
@@ -11,5 +11,7 @@
   <li>Season Picked: <%= tea.season_picked %></li>
   <li>Ideal Teapot: <%= tea.ideal_teapot %></li>
   <li>Caffinated? <%= tea.caffeinated %></li><br/>
-  <%= link_to "Update Tea", "/teas/#{@teas.id}/edit", method: :get %>
 <% end %>
+
+
+<%= link_to "Take Me Back", "/teahouses/#{@teahouse.id}", method: :get %><br>
