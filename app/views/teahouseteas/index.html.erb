@@ -13,5 +13,6 @@
   <li>Caffinated? <%= tea.caffeinated %></li><br/>
 <% end %>
 
+<%= link_to "Add New Tea", "/teahouses/#{@teahouse.id}/teas/new", method: :get %><br>
 
 <%= link_to "Take Me Back", "/teahouses/#{@teahouse.id}", method: :get %><br>

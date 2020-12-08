@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   post '/teas/:id', to: 'teas#update'
 
   #teahouseteas
+  get '/teahouseteas/:id/teas', to: 'teahouseteas#index'
   get '/teahouses/:id/teas/new', to: 'teahouseteas#new'
   post '/teahouses/:id/teas', to: 'teahouseteas#create'
 end
