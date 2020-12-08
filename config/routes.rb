@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   get '/teas/:id/edit', to: 'teas#edit'
   patch '/teas/:id', to: 'teas#update'
   post '/teas/:id', to: 'teas#update'
+  delete 'teas/:id', to: 'teas#destroy'
 
   #teahouseteas
   get '/teahouseteas/:id/teas', to: 'teahouseteas#index'

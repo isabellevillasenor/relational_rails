@@ -19,6 +19,11 @@ class TeasController < ApplicationController
     redirect_to "/teas/#{tea.id}"
   end
 
+  def destroy
+    tea = Tea.destroy(params[:id])
+    redirect_to "/teas"
+  end
+
   private
   def tea_params
     params.permit(:name, :category, :origin, :grams_needed, :steep_time, :brew_temp, :number_of_infusions, :season_picked, :ideal_teapot, :caffeinated)
