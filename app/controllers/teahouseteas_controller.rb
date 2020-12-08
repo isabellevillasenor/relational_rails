@@ -11,6 +11,10 @@ class TeahouseteasController < ApplicationController
     @teahouse = Teahouse.find(params[:id])
   end
 
+  def show
+    @teas = Tea.find(params[:id])
+  end
+
   private
   def tea_params
     params.permit(:name, :category, :origin, :grams_needed, :steep_time, :brew_temp, :number_of_infusions, :season_picked, :ideal_teapot, :caffeinated)
