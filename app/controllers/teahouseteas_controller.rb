@@ -1,11 +1,13 @@
-class TeasController < ApplicationController
+class TeahouseteasController < ApplicationController
 
-  def index
-    @teas = Tea.all
+  def create
+    @teahouse = Teahouse.find(params[:id])
+    # binding.pry
+    @teahouse.teas.create!(tea_params)
+    redirect_to "/teahouses/#{params[:id]}/teas"
   end
 
-  def show
-    @teahouse_teas = Teahouse.find(params[:id]).teas
+  def new
     @teahouse = Teahouse.find(params[:id])
   end
 
@@ -13,5 +15,4 @@ class TeasController < ApplicationController
   def tea_params
     params.permit(:name, :category, :origin, :grams_needed, :steep_time, :brew_temp, :number_of_infusions, :season_picked, :ideal_teapot, :caffeinated)
   end
-
 end

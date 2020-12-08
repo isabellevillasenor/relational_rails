@@ -1,0 +1,26 @@
+<h3>What's your new brew, friend?</h3>
+
+<%= form_tag("/teahouses/#{@teahouse.id}/teas", method: :post) do %>
+  <%= label_tag :name %><br>
+  <%= text_field_tag :name %><br>
+  <%= label_tag :category %><br>
+  <%= text_field_tag :category %><br>
+  <%= label_tag :origin %><br>
+  <%= text_field_tag :origin %><br>
+  <%= label_tag :grams_needed %><br>
+  <%= number_field_tag :grams_needed %><br>
+  <%= label_tag :steep_time %><br>
+  <%= number_field_tag :steep_time %><br>
+  <%= label_tag :brew_temp %><br>
+  <%= number_field_tag :brew_temp %><br>
+  <%= label_tag :number_of_infusions %><br>
+  <%= number_field_tag :number_of_infusions %><br>
+  <%= label_tag :season_picked %><br>
+  <%= date_field_tag :season_picked %><br>
+  <%= label_tag :ideal_teapot %><br>
+  <%= text_field_tag :ideal_teapot %><br>
+  <%= label_tag :caffeinated %>
+  <%= hidden_field_tag :caffeinated, false %>
+  <%= check_box_tag :caffeinated, true %><br>
+  <%= submit_tag 'Create' %>
+<% end %>

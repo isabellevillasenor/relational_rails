@@ -1,7 +1,7 @@
 <h1>Tea List:</h1>
 
 <% @teas.each do |tea| %>
-  <li><b>Name: <%= tea.name %></b></li>
+  <h3>Name: <%= tea.name %></h3>
   <li>Category: <%= tea.category %></li>
   <li>Origin: <%= tea.origin %></li>
   <li>Grams Needed: <%= tea.grams_needed %></li>
@@ -10,5 +10,6 @@
   <li>Number of Infusions: <%= tea.number_of_infusions %></li>
   <li>Season Picked: <%= tea.season_picked %></li>
   <li>Ideal Teapot: <%= tea.ideal_teapot %></li>
-  <li>Caffinated? <%= tea.caffeinated %></li><br>
+  <li>Caffinated? <%= tea.caffeinated %></li><br/>
+
 <% end %>

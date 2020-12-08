@@ -1,15 +1,16 @@
-<h3><%= @teahouse.name  %> Tea List:</h3><br>
+<h3>Tea Information:</h3><br>
 <% @teahouse_teas.each do |tea| %>
-  <li>Name: <%= tea.name %></li>
-  <li>Category: <%= tea.category %></li>
-  <li>Origin: <%= tea.origin %></li>
-  <li>Grams Needed: <%= tea.grams_needed %></li>
-  <li>Steep Time:<%= tea.steep_time %></li>
-  <li>Brew Temp: <%= tea.brew_temp %></li>
-  <li>Number of Infusions: <%= tea.number_of_infusions %></li>
-  <li>Season Picked: <%= tea.season_picked %></li>
-  <li>Ideal Teapot: <%= tea.ideal_teapot %></li>
-  <li>Caffinated? <%= tea.caffeinated %></li><br>
+  <li><b>Name: </b><%= tea.name %></li>
+  <li><b>Category: </b><%= tea.category %></li>
+  <li><b>Origin: </b><%= tea.origin %></li>
+  <li><b>Grams Needed: </b><%= tea.grams_needed %></li>
+  <li><b>Steep Time: </b><%= tea.steep_time %></li>
+  <li><b>Brew Temp: </b><%= tea.brew_temp %></li>
+  <li><b>Number of Infusions: </b><%= tea.number_of_infusions %></li>
+  <li><b>Season Picked: </b><%= tea.season_picked %></li>
+  <li><b>Ideal Teapot: </b><%= tea.ideal_teapot %></li>
+  <li><b>Caffinated? </b><%= tea.caffeinated %></li><br>
 <% end %>
 
-<%= link_to "Take Me Back", "/teahouses/#{@teahouse.id}", method: :get %>
+<%= link_to "Create New Tea", "/teahouses/#{@teahouse.id}/teas/new", method: :get %><br/>
+<%= link_to "Take Me To The Teahouse", "/teahouses/#{@teahouse.id}", method: :get %>
