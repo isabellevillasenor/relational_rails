@@ -22,7 +22,10 @@ Rails.application.routes.draw do
   delete 'teahouses/:id', to: 'teahouses#destroy'
 
   get '/teas', to: 'teas#index'
+  get '/teas/:id/edit', to: 'teas#teas_show'
   get '/teas/:id', to: 'teas#show'
+  patch '/teas/:id', to: 'teas#update'
+  post '/teas/:id', to: 'teas#update'
 
   #teahouseteas
   get '/teahouses/:id/teas/new', to: 'teahouseteas#new'
