@@ -9,11 +9,15 @@ class TeasController < ApplicationController
     @teahouse = Teahouse.find(params[:id])
   end
 
-  def teas_show
-    @tea_show = Tea.find(param[:id])
+  def tea_show
+    @tea_show = Tea.find(params[:id])
   end
 
   def edit
+
+  end
+
+  def update
 
   end
 

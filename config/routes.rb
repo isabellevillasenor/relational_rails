@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   get '/teas', to: 'teas#index'
   get '/teas/:id/edit', to: 'teas#teas_show'
-  get '/teas/:id', to: 'teas#show'
+  get '/teas/:id', to: 'teas#tea_show'
   patch '/teas/:id', to: 'teas#update'
   post '/teas/:id', to: 'teas#update'
 
