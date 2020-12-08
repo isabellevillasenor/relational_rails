@@ -1,6 +1,6 @@
 <h3>What's your new brew, friend?</h3>
 
-<%= form_tag("/teahouses/:id/teas", method: :post) do %>
+<%= form_tag("/teahouses/#{@teahouse.id}/teas", method: :post) do %>
   <%= label_tag :name %><br>
   <%= text_field_tag :name %><br>
   <%= label_tag :category %><br>

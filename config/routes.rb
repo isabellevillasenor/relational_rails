@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   post '/teahouses', to: 'teahouses#create'
   get '/teahouses/:id', to: 'teahouses#show'
   get '/teahouses/:id/teas', to: 'teas#show'
-  get '/teahouses/:id/teas/new', to: 'teas#new'
-  post '/teahouses/:id/teas', to: 'teas#create'
+
+
   get '/teahouses/:id/edit', to: 'teahouses#edit'
   patch '/teahouses/:id', to: 'teahouses#update'
   post '/teahouses/:id', to: 'teahouses#update'
@@ -23,4 +23,8 @@ Rails.application.routes.draw do
 
   get '/teas', to: 'teas#index'
   get '/teas/:id', to: 'teas#show'
+
+  #teahouseteas
+  get '/teahouses/:id/teas/new', to: 'teahouseteas#new'
+  post '/teahouses/:id/teas', to: 'teahouseteas#create'
 end
