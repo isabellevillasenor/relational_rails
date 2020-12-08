@@ -11,5 +11,5 @@
   <li>Season Picked: <%= tea.season_picked %></li>
   <li>Ideal Teapot: <%= tea.ideal_teapot %></li>
   <li>Caffinated? <%= tea.caffeinated %></li><br/>
-  <%= link_to "Update Tea", "/teas/#{@teas.id}/edit", method: :get %>
+  <%= link_to "Update Tea", "/teas/#{tea.id}/edit", method: :get %>
 <% end %>

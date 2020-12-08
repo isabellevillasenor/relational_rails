@@ -5,18 +5,18 @@ class TeasController < ApplicationController
   end
 
   def edit
-    @tea_show = Tea.find(params[:id])
+    @tea = Tea.find(params[:id])
   end
 
   def show # child
-    @tea_show = Tea.find(params[:id])
+    @tea = Tea.find(params[:id])
   end
 
   def update
-    teas = Tea.find(params[:id])
-    teas.update(tea_params)
-    teas.save
-    redirect_to "/teas/#{teas.id}"
+    tea = Tea.find(params[:id])
+    tea.update(tea_params)
+    tea.save
+    redirect_to "/teas/#{tea.id}"
   end
 
   private

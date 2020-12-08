@@ -1,6 +1,6 @@
 <h3>What's different friend?</h3>
 
-<%= form_tag("/teas/#{@tea_show.id}", method: :post) do %>
+<%= form_tag("/teas/#{@tea.id}", method: :patch) do %>
   <%= label_tag :name %><br>
   <%= text_field_tag :name %><br>
   <%= label_tag :category %><br>
