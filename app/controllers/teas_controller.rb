@@ -4,17 +4,19 @@ class TeasController < ApplicationController
     @teas = Tea.all
   end
 
-  def show
-    @teahouse_teas = Teahouse.find(params[:id]).teas
-    @teahouse = Teahouse.find(params[:id])
-  end
-
-  def teas_show
-    @tea_show = Tea.find(param[:id])
-  end
-
   def edit
+    @tea = Tea.find(params[:id])
+  end
 
+  def show # child
+    @tea = Tea.find(params[:id])
+  end
+
+  def update
+    tea = Tea.find(params[:id])
+    tea.update(tea_params)
+    tea.save
+    redirect_to "/teas/#{tea.id}"
   end
 
   private

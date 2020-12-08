@@ -1,8 +1,12 @@
 class TeahouseteasController < ApplicationController
 
+  def index
+    @teahouse_teas = Teahouse.find(params[:id]).teas
+    @teahouse = Teahouse.find(params[:id])
+  end
+
   def create
     @teahouse = Teahouse.find(params[:id])
-    # binding.pry
     @teahouse.teas.create!(tea_params)
     redirect_to "/teahouses/#{params[:id]}/teas"
   end

@@ -1,18 +1,13 @@
-<h3><%= @teahouse.name  %> Tea List:</h3><br>
-<% @teahouse_teas.each do |tea| %>
-  <li>Name: <%= tea.name %></li>
-  <li>Category: <%= tea.category %></li>
-  <li>Origin: <%= tea.origin %></li>
-  <li>Grams Needed: <%= tea.grams_needed %></li>
-  <li>Steep Time:<%= tea.steep_time %></li>
-  <li>Brew Temp: <%= tea.brew_temp %></li>
-  <li>Number of Infusions: <%= tea.number_of_infusions %></li>
-  <li>Season Picked: <%= tea.season_picked %></li>
-  <li>Ideal Teapot: <%= tea.ideal_teapot %></li>
-  <li>Caffinated? <%= tea.caffeinated %></li><br>
+<h1><%= @tea.name %> Tea Attributes:</h1>
 
-<% end %>
-
-<%= link_to "Update Tea", "/teas/#{@teas.first.id}/edit", method: :get %>
-
-<%= link_to "Take Me Back", "/teahouses/#{@teahouse.id}", method: :get %><br>
+  <h3>Name: <%= @tea.name %></h3>
+  <li>Category: <%= @tea.category %></li>
+  <li>Origin: <%= @tea.origin %></li>
+  <li>Grams Needed: <%= @tea.grams_needed %></li>
+  <li>Steep Time:<%= @tea.steep_time %></li>
+  <li>Brew Temp: <%= @tea.brew_temp %></li>
+  <li>Number of Infusions: <%= @tea.number_of_infusions %></li>
+  <li>Season Picked: <%= @tea.season_picked %></li>
+  <li>Ideal Teapot: <%= @tea.ideal_teapot %></li>
+  <li>Caffinated? <%= @tea.caffeinated %></li><br/>
+  <%= link_to "Update Tea", "/teas/#{@tea.id}/edit", method: :get %>
