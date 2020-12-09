@@ -1,7 +1,7 @@
 class TeasController < ApplicationController
 
   def index
-    @teas = Tea.order_by_season
+    @teas = Tea.caffeinated
   end
 
   def edit

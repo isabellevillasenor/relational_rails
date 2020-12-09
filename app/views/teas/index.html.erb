@@ -2,7 +2,7 @@
 
 <% @teas.each do |tea| %>
   <a href="/teas/<%= tea.id %>"><h3><%= tea.name %></h3></a>
-  <b>Season Picked: </b><%= tea.season_picked %>
+  <li><b>Caffinated? </b><%= tea.caffeinated %></li><br/>
   <li>Category: <%= tea.category %></li>
   <li>Origin: <%= tea.origin %></li>
   <li>Grams Needed: <%= tea.grams_needed %></li>
@@ -10,6 +10,6 @@
   <li>Brew Temp: <%= tea.brew_temp %></li>
   <li>Number of Infusions: <%= tea.number_of_infusions %></li>
   <li>Ideal Teapot: <%= tea.ideal_teapot %></li>
-  <li>Caffinated? <%= tea.caffeinated %></li><br/>
+  <li>Season Picked: <%= tea.season_picked %></li>
   <%= link_to "Update Tea", "/teas/#{tea.id}/edit", method: :get %>
 <% end %>
