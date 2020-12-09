@@ -24,6 +24,17 @@ class TeahouseteasController < ApplicationController
     @teas = Tea.find(params[:id])
   end
 
+  def edit
+    @teahouse = Teahouse.find(params[:id])
+  end
+  
+  def update
+    tea = Tea.find(params[:tea_id])
+    tea.update(tea_params)
+    tea.save
+    redirect_to 'teahouseteasindex_path'
+  end
+
   private
   def tea_params
     params.permit(:name, :category, :origin, :grams_needed, :steep_time, :brew_temp, :number_of_infusions, :season_picked, :ideal_teapot, :caffeinated)

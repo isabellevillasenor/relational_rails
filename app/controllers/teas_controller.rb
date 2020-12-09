@@ -20,7 +20,7 @@ class TeasController < ApplicationController
     tea = Tea.find(params[:id])
     tea.update(tea_params)
     tea.save
-    redirect_to "/teas/#{tea.id}"
+    redirect_to "/teas"
   end
 
   def destroy

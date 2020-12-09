@@ -13,15 +13,18 @@ Rails.application.routes.draw do
 
   #teahouses
   get '/teahouses', to: 'teahouses#index'
-  get '/teahouses/:id/teas', to: 'teahouseteas#index'
+  get '/teahouses/:id/teas', to: 'teahouseteas#index', as: 'teahouseteasindex'
   get 'teahouses/new', to: 'teahouses#new'
   post '/teahouses', to: 'teahouses#create'
   get '/teahouses/:id', to: 'teahouses#show'
   get '/teahouses/:id/edit', to: 'teahouses#edit'
   patch '/teahouses/:id', to: 'teahouses#update'
   post '/teahouses/:id', to: 'teahouses#update'
+  get '/teahouses/:id/teas/edit', to: 'teahouseteas#edit', as: 'teahouseteasedit'
+  patch '/teahouses/:id/teas', to: 'teahouseteas#update'
+  post '/teahouses/:id/teas', to: 'teahouseteas#update'
   delete 'teahouses/:id', to: 'teahouses#destroy'
-
+  
   #teas
   get '/teas', to: 'teas#index'
   get '/teas/:id', to: 'teas#show'
@@ -29,7 +32,7 @@ Rails.application.routes.draw do
   patch '/teas/:id', to: 'teas#update'
   post '/teas/:id', to: 'teas#update'
   delete 'teas/:id', to: 'teas#destroy'
-
+  
   #teahouseteas
   get '/teahouseteas/:id/teas', to: 'teahouseteas#index', as: 'teahouseteas'
   get '/teahouses/:id/teas/new', to: 'teahouseteas#new'

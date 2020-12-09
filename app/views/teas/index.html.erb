@@ -16,6 +16,11 @@
   <li>Number of Infusions: <%= tea.number_of_infusions %></li>
   <li>Ideal Teapot: <%= tea.ideal_teapot %></li>
   <li>Season Picked: <%= tea.season_picked %></li><br/>
-  <%= link_to "Update Tea", "/teas/#{tea.id}/edit", method: :get %>
+  <%= link_to "Update Tea", "/teas/#{tea.id}/edit", method: :get %><br>
+  <form action="teas/<%= tea.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="delete"/>
+  </form>
 <% end %>
 
