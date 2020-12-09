@@ -12,4 +12,5 @@ class Tea < ApplicationRecord
   def self.grams_required(threshold)
     where("grams_needed >= #{threshold}")
   end
+  
 end
