@@ -11,3 +11,4 @@
   <li>Ideal Teapot: <%= @tea.ideal_teapot %></li>
   <li>Caffinated? <%= @tea.caffeinated %></li><br/>
   <%= link_to "Update Tea", "/teas/#{@tea.id}/edit", method: :get %>
+  <%= button_to "Delete Tea", "/teas/#{@tea.id}", method: :delete %>

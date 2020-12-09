@@ -1,7 +1,7 @@
 <h1>Tea List:</h1>
 
 <% @teas.each do |tea| %>
-  <h3>Name: <%= tea.name %></h3>
+  <a href="/teas/<%= tea.id %>"><h3><%= tea.name %></h3></a>
   <li>Category: <%= tea.category %></li>
   <li>Origin: <%= tea.origin %></li>
   <li>Grams Needed: <%= tea.grams_needed %></li>
