@@ -9,4 +9,7 @@ class Tea < ApplicationRecord
     order("caffeinated desc")
   end
   
+  def self.grams_required(threshold)
+    where("grams_needed >= #{threshold}")
+  end
 end

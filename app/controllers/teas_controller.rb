@@ -1,14 +1,18 @@
 class TeasController < ApplicationController
 
   def index
-    @teas = Tea.caffeinated
+    if params[:threshold] 
+      @teas = Tea.grams_required(params[:threshold])
+    else
+      @teas = Tea.caffeinated
+    end
   end
 
   def edit
     @tea = Tea.find(params[:id])
   end
 
-  def show # child
+  def show
     @tea = Tea.find(params[:id])
   end
 
