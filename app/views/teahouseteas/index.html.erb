@@ -13,6 +13,7 @@
   <li>Ideal Teapot: <%= tea.ideal_teapot %></li>
   <li>Caffinated? <%= tea.caffeinated %></li><br/>
 <% end %>
+<h4><%= link_to "Sort Teas Alphabetically", teahouseteas_path(sort: :true), method: :get %></h4>
 
 <%= link_to "Add New Tea", "/teahouses/#{@teahouse.id}/teas/new", method: :get %><br>
 
