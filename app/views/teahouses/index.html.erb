@@ -3,9 +3,10 @@
 <h2>Where shall we have our cuppa tea today?</h2>
 
 <% @teahouse.each do |tea_house| %>
-  <li><a href="/teahouses/<%= tea_house.id %>"><%= tea_house.name %></a></li>
+  <h3><li><a href="/teahouses/<%= tea_house.id %>"><%= tea_house.name %></a></li></h3>
   <p><b>Opening Date: </b><%= tea_house.opening_date %></p>
   <p><b>Count Of Teas In Stock: </b><%= tea_house.teas.count_teas %></p>
+  <h5><%= link_to "Update Teahouse Info", "/teahouses/#{tea_house.id}/edit", method: :get %></h5>
   <form action="teahouses/<%= tea_house.id %>" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="hidden" name="_method" value="DELETE">
