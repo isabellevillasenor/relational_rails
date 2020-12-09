@@ -1,7 +1,7 @@
 class TeahousesController < ApplicationController
 
   def index
-    @teahouses = Teahouse.all
+    @teahouses = Teahouse.order_by_opening_date
   end
 
   def show
