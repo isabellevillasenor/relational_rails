@@ -1,8 +1,13 @@
 class TeahouseteasController < ApplicationController
 
   def index
-    @teahouse_teas = Teahouse.find(params[:id]).teas
-    @teahouse = Teahouse.find(params[:id])
+    if params[:sort]
+      @teahouse_teas = Teahouse.find(params[:id]).teas.order_by_alphabet
+      @teahouse = Teahouse.find(params[:id])
+    else
+      @teahouse_teas = Teahouse.find(params[:id]).teas
+      @teahouse = Teahouse.find(params[:id])
+    end
   end
 
   def create

@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   delete 'teas/:id', to: 'teas#destroy'
 
   #teahouseteas
-  get '/teahouseteas/:id/teas', to: 'teahouseteas#index'
+  get '/teahouseteas/:id/teas', to: 'teahouseteas#index', as: 'teahouseteas'
   get '/teahouses/:id/teas/new', to: 'teahouseteas#new'
   post '/teahouses/:id/teas', to: 'teahouseteas#create'
 end

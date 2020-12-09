@@ -1,4 +1,5 @@
 <h1><%= @teahouse.name %> Tea List:</h1>
+<h2><%= @teahouse_teas.count_teas %> Total Teas</h2>
 
 <% @teahouse_teas.each do |tea| %>
   <h3>Name: <%= tea.name %></h3>
@@ -12,6 +13,7 @@
   <li>Ideal Teapot: <%= tea.ideal_teapot %></li>
   <li>Caffinated? <%= tea.caffeinated %></li><br/>
 <% end %>
+<h4><%= link_to "Sort Teas Alphabetically", teahouseteas_path(sort: :true), method: :get %></h4>
 
 <%= link_to "Add New Tea", "/teahouses/#{@teahouse.id}/teas/new", method: :get %><br>
 
