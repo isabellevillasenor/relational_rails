@@ -5,6 +5,8 @@ class Beer < ApplicationRecord
     order("brewed_on desc")
   end
 
-
+  def self.happy_level(threshold)
+    where("ABV >= #{threshold}")
+  end
 
 end

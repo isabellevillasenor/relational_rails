@@ -1,7 +1,12 @@
 class BeersController < ApplicationController
 
   def index
-    @beers = Beer.order("brewed_on desc")
+    if params[:threshold]
+      require "pry"; binding.pry
+      @beers = Beer.happy_level(params[:threshold])
+    else
+      @beers = Beer.order("brewed_on desc")
+    end
   end
 
   def show
