@@ -11,13 +11,16 @@ Rails.application.routes.draw do
   patch '/microbreweries/:id', to: 'microbreweries#update'
   post '/microbreweries/:id', to: 'microbreweries#update'
   delete 'microbreweries/:id', to: 'microbreweries#destroy'
-  
+
   get 'microbreweries/:id/beers/new', to: 'microbrewerybeers#new'
   post 'microbreweries/:id/beers/', to: 'microbrewerybeers#create'
 
   #beer
   get '/beers', to: 'beers#index'
   get '/beers/:id', to: 'beers#show'
+  get '/beers/:id/edit', to: 'beers#edit'
+  patch '/beers/:id', to: 'beers#update'
+  post '/beers/:id', to: 'beers#create'
 
   #teahouses
   get '/teahouses', to: 'teahouses#index'

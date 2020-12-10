@@ -8,3 +8,5 @@
 <li>Aroma: <%= @beer.aroma %></li>
 <li>Color: <%= @beer.color %></li>
 <li>Brew Date: <%= @beer.brewed_on %></li><br>
+
+<%= link_to "Update Beer", "/beers/#{@beer.id}/edit", method: :get %>
