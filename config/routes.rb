@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   #beer
   get '/beers', to: 'beers#index'
+  get '/beers/:id', to: 'beers#show'
 
   #teahouses
   get '/teahouses', to: 'teahouses#index'
