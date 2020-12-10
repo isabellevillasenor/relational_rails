@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   #microbreweries
   get '/microbreweries', to: 'microbreweries#index'
-  get '/microbreweries/new', to: 'microbreweries#new'
+  get '/microbreweries/new', to: 'microberbeers#index'
   post '/microbreweries', to: 'microbreweries#create'
+  get '/microbreweries/:id/beers', to: 'microbrewerybeers#index' #, as: 'microbrewerybeersindex'
   get '/microbreweries/:id', to: 'microbreweries#show'
   get '/microbreweries/:id/edit', to: 'microbreweries#edit'
   patch '/microbreweries/:id', to: 'microbreweries#update'
