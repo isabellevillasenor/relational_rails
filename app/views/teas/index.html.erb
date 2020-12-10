@@ -1,6 +1,6 @@
 <h1>Tea List:</h1>
 
-<%= form_tag("/teas", method: :get) do %>
+<%= form_tag "/teas", method: :get do %>
   <%= label_tag :desired_weight %><br>
   <%= text_field_tag :threshold %><br>
   <%= submit_tag 'Get Results' %>
@@ -23,4 +23,3 @@
     <input type="submit" value="delete"/>
   </form>
 <% end %>
-

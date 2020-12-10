@@ -1,5 +1,10 @@
 <h1>Hey Beer Nerd!</h1>
 
+<%= form_tag "/beers", method: :get do %>
+  <%= label_tag :how_happy_you_gon_be_enter_ABV_percentage %>
+  <%= text_field_tag :threshold %>
+  <%= submit_tag 'Get Happy' %>
+<% end %>
 <h2>Beer Facts:</h2>
 <% @beers.each do |beer| %>
   <l1><b><%= beer.name %></b></l1>

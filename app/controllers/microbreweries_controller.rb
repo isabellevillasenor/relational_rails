@@ -1,6 +1,6 @@
 class MicrobreweriesController < ApplicationController
   def index
-    @microbreweries = Microbrewery.all
+    @microbreweries = Microbrewery.outdoor_seating
   end
 
   def show
@@ -14,7 +14,7 @@ class MicrobreweriesController < ApplicationController
     microbrewery = Microbrewery.new(brewery_params)
     microbrewery.save
     redirect_to '/microbreweries'
-  end 
+  end
 
   def edit
     @microbrewery = Microbrewery.find(params[:id])
@@ -31,7 +31,7 @@ class MicrobreweriesController < ApplicationController
     Microbrewery.destroy(params[:id])
     redirect_to '/microbreweries'
   end
-  
+
   private
   def brewery_params
     params.permit(:name, :location, :license_renewal, :outdoor_seating, :social_distancing)
