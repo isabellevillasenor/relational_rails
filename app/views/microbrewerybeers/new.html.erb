@@ -1,0 +1,21 @@
+<h3>What's your new brew, friend?</h3>
+
+<%= form_tag("/microbreweries/#{@microbrewery.id}/beers", method: :post) do %>
+  <%= label_tag :name %><br>
+  <%= text_field_tag :name %><br>
+  <%= label_tag :category %><br>
+  <%= text_field_tag :category %><br>
+  <%= label_tag :ABV %><br>
+  <%= text_field_tag :ABV %><br>
+  <%= label_tag :ideal_vessel %><br>
+  <%= text_field_tag :ideal_vessel %><br>
+  <%= label_tag :body %><br>
+  <%= text_field_tag :body %><br>
+  <%= label_tag :aroma %><br>
+  <%= text_field_tag :aroma %><br>
+  <%= label_tag :color %><br>
+  <%= text_field_tag :color %><br>
+  <%= label_tag :brewed_on %><br>
+  <%= date_field_tag :brewed_on %><br>
+  <%= submit_tag 'Create' %>
+<% end %>

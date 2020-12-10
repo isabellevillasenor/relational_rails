@@ -1,0 +1,14 @@
+<h1><%= @microbrewery.name %> Tea List:</h1>
+
+<% @microbrewery_beers.each do |beer| %>
+  <h3>Name: <%= beer.name %></h3>
+  <li>Category: <%= beer.category %></li>
+  <li>ABV: <%= beer.ABV %></li>
+  <li>Ideal Vessel: <%= beer.ideal_vessel %></li>
+  <li>Body:<%= beer.body %></li>
+  <li>Aroma: <%= beer.aroma %></li>
+  <li>Color: <%= beer.color %></li>
+  <li>Brewed On: <%= beer.brewed_on %></li>
+<% end %>
+
+<%= link_to "Add New Beer", "/microbreweries/#{@microbrewery.id}/beers/new", method: :get %><br>

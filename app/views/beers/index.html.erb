@@ -1,0 +1,20 @@
+<h1>Hey Beer Nerd!</h1>
+
+<h2>Beer Facts:</h2>
+<% @beers.each do |beer| %>
+  <l1><b><%= beer.name %></b></l1>
+  <li>Category: <%= beer.category %></li>
+  <li>ABV: <%= beer.ABV %></li>
+  <li>Ideal Vessel: <%= beer.ideal_vessel %></li>
+  <li>Body: <%= beer.body %></li>
+  <li>Aroma: <%= beer.aroma %></li>
+  <li>Color: <%= beer.color %></li>
+  <li>Brew Date: <%= beer.brewed_on %></li><br>
+
+  <form action="beers/<%= beer.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="delete"/>
+  </form>
+
+<% end %>

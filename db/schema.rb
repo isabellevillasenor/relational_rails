@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_06_230050) do
+ActiveRecord::Schema.define(version: 2020_12_10_005937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 2020_12_06_230050) do
     t.string "aroma"
     t.string "color"
     t.datetime "brewed_on"
-    t.integer "brewery_id"
+    t.bigint "microbrewery_id"
+    t.index ["microbrewery_id"], name: "index_beers_on_microbrewery_id"
   end
 
   create_table "microbreweries", force: :cascade do |t|
@@ -58,5 +59,6 @@ ActiveRecord::Schema.define(version: 2020_12_06_230050) do
     t.index ["teahouse_id"], name: "index_teas_on_teahouse_id"
   end
 
+  add_foreign_key "beers", "microbreweries"
   add_foreign_key "teas", "teahouses"
 end
