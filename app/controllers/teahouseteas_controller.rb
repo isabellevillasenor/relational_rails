@@ -27,7 +27,7 @@ class TeahouseteasController < ApplicationController
   def edit
     @teahouse = Teahouse.find(params[:id])
   end
-  
+
   def update
     tea = Tea.find(params[:tea_id])
     tea.update(tea_params)

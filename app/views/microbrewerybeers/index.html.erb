@@ -10,3 +10,5 @@
   <li>Color: <%= beer.color %></li>
   <li>Brewed On: <%= beer.brewed_on %></li>
 <% end %>
+
+<%= link_to "Add New Beer", "/microbreweries/#{@microbrewery.id}/beers/new", method: :get %><br>
