@@ -5,4 +5,6 @@ class Beer < ApplicationRecord
     order("brewed_on desc")
   end
 
+
+
 end

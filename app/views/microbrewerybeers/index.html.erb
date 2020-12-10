@@ -1,4 +1,5 @@
 <h1><%= @microbrewery.name %> Tea List:</h1>
+<h2><%= @microbrewery_beers.count %></h2>
 
 <% @microbrewery_beers.each do |beer| %>
   <h3>Name: <%= beer.name %></h3>
