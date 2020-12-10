@@ -1,8 +1,8 @@
 class Microbrewery < ApplicationRecord
   has_many :beers, dependent: :destroy
 
-  def newest_brewery
-    order("")
+  def self.outdoor_seating
+    order("outdoor_seating desc")
   end
 
 end
