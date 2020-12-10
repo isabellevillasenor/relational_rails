@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   post '/microbreweries/:id', to: 'microbreweries#update'
   delete 'microbreweries/:id', to: 'microbreweries#destroy'
 
+  #beer
+  get '/beers', to: 'beers#index'
+
   #teahouses
   get '/teahouses', to: 'teahouses#index'
   get '/teahouses/:id/teas', to: 'teahouseteas#index', as: 'teahouseteasindex'
@@ -24,7 +27,7 @@ Rails.application.routes.draw do
   patch '/teahouses/:id/teas', to: 'teahouseteas#update'
   post '/teahouses/:id/teas', to: 'teahouseteas#update'
   delete 'teahouses/:id', to: 'teahouses#destroy'
-  
+
   #teas
   get '/teas', to: 'teas#index'
   get '/teas/:id', to: 'teas#show'
@@ -32,7 +35,7 @@ Rails.application.routes.draw do
   patch '/teas/:id', to: 'teas#update'
   post '/teas/:id', to: 'teas#update'
   delete 'teas/:id', to: 'teas#destroy'
-  
+
   #teahouseteas
   get '/teahouseteas/:id/teas', to: 'teahouseteas#index', as: 'teahouseteas'
   get '/teahouses/:id/teas/new', to: 'teahouseteas#new'

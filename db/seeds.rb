@@ -6,24 +6,68 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Microbrewery.destroy_all
+Beer.destroy_all
 Teahouse.destroy_all
 Tea.destroy_all
-Beer.destroy_all
 
-Microbrewery.create!(
+tuatara = Microbrewery.create!(
   name: "Tuatara",
   location: "7 Sheffield Street, Paraparaumu 5032, New Zealand",
   license_renewal: '2020-12-04',
   outdoor_seating: true,
   social_distancing: true
   )
-Microbrewery.create!(
+parrot_dog = Microbrewery.create!(
   name: "Parrot Dog",
   location: "60/66 Kingsford Smith Street, Lyall Bay, Wellington 6022, New Zealand",
   license_renewal: '2021-12-04',
   outdoor_seating: true,
   social_distancing: true
   )
+
+parrot_dog.beers.create!(
+  category: "Pilsner",
+  name: "Pandemonium",
+  ABV: 4.8,
+  ideal_vessel: "flute",
+  body: "light",
+  aroma: "citrus",
+  color: "straw",
+  brewed_on: "2020-03-01 08:00:00"
+ )
+
+parrot_dog.beers.create!(
+  category: "IPA",
+  name: "Death From Above",
+  ABV: 6.8,
+  ideal_vessel: "Pint",
+  body: "Full",
+  aroma: "Hoppy",
+  color: "Dark Caramel",
+  brewed_on: "2020-06-01 08:00:00"
+ )
+
+tuatara.beers.create!(
+  category: "Dark Ale",
+  name: "Belgian Dubbel",
+  ABV: 7.5,
+  ideal_vessel: "Pint",
+  body: "Full",
+  aroma: "Sweet, dark candy aroma",
+  color: "Light Mahogany",
+  brewed_on: "2020-07-11 08:00:00"
+ )
+
+tuatara.beers.create!(
+  category: "Pale Ale",
+  name: "Pacific Pale Ale",
+  ABV: 4.4,
+  ideal_vessel: "Flute",
+  body: "Light",
+  aroma: "Floral, tropical fruit",
+  color: "Light Amber",
+  brewed_on: "2020-02-21 08:00:00"
+ )
 
 mei_leaf = Teahouse.create!(
   name: "Mei Leaf",

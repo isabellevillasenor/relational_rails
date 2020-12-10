@@ -1,0 +1,13 @@
+<h1>Hey Beer Nerd!</h1>
+
+<h2>Beer Facts:</h2>
+<% @beers.each do |beer| %>
+  <l1><b><%= beer.name %></b></l1>
+  <li>Category: <%= beer.category %></li>
+  <li>ABV: <%= beer.ABV %></li>
+  <li>Ideal Vessel: <%= beer.ideal_vessel %></li>
+  <li>Body: <%= beer.body %></li>
+  <li>Aroma: <%= beer.aroma %></li>
+  <li>Color: <%= beer.color %></li>
+  <li>Brew Date: <%= beer.brewed_on %></li><br>
+<% end %>
